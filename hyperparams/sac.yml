@@ -62,7 +62,7 @@ PandaPickAndPlace-v3:
   policy_kwargs: "dict(net_arch=[64, 64])"
 
 
-  PandaReach-v3:
+PandaReach-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
