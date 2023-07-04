@@ -219,7 +219,7 @@ def sample_sac_params(trial: optuna.Trial) -> Dict[str, Any]:
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 128, 256, 512, 1024, 2048])
     buffer_size = trial.suggest_categorical("buffer_size", [int(1e4), int(1e5), int(1e6)])
-    learning_starts = trial.suggest_categorical("learning_starts", [0, 1000])
+    learning_starts = trial.suggest_categorical("learning_starts", [1000, 10000, 20000]) #learning_starts = trial.suggest_categorical("learning_starts", [0, 1000, 10000, 20000])
     # train_freq = trial.suggest_categorical('train_freq', [1, 10, 100, 300])
     train_freq = trial.suggest_categorical("train_freq", [1, 4, 8, 16, 32, 64, 128, 256, 512])
     # Polyak coeff
