@@ -3,7 +3,7 @@ FetchReach-v1:
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
   ent_coef: 'auto'
-  batch_size: 2**8
+  batch_size: 256
   gamma: 0.9
   learning_rate: 0.001
   learning_starts: 1000
@@ -21,7 +21,7 @@ PandaReachDense-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -32,7 +32,7 @@ PandaPushDense-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -43,7 +43,7 @@ PandaSlideDense-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -54,7 +54,7 @@ PandaPickAndPlace-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -66,7 +66,7 @@ PandaReach-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -77,7 +77,7 @@ PandaPush-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -88,7 +88,7 @@ PandaSlide-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
@@ -99,7 +99,7 @@ PandaPickAndPlace-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
-  batch_size: 2 ** 8
+  batch_size: 256
   learning_rate: 0.001
   normalize: true
   replay_buffer_class: HerReplayBuffer
