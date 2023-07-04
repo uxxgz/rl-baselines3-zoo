@@ -240,8 +240,8 @@ def sample_sac_params(trial: optuna.Trial) -> Dict[str, Any]:
         "medium": [256, 256],
         "big": [400, 300],
         # Uncomment for tuning HER
-        # "large": [256, 256, 256],
-        # "verybig": [512, 512, 512],
+        "large": [256, 256, 256],
+        "verybig": [512, 512, 512],
     }[net_arch]
 
     target_entropy = "auto"
