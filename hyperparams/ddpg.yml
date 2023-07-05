@@ -19,7 +19,7 @@ Pendulum-v1:
   policy_kwargs: "dict(net_arch=[400, 300])"
 
 
-PandaPickAndPlace-v3:
+PandaReach-v3:
   n_timesteps: !!float 3e5
   policy: 'MultiInputPolicy'
   gamma: 0.98
@@ -32,7 +32,7 @@ PandaPickAndPlace-v3:
   learning_rate: !!float 1e-3
   policy_kwargs: "dict(net_arch=[400, 300])"
 
-PandaPickAndPlaceDense-v3:
+PandaReachDense-v3:
   n_timesteps: !!float 3e5
   policy: 'MultiInputPolicy'
   gamma: 0.98
