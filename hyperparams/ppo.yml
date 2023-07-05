@@ -2,7 +2,7 @@ PandaReach-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -14,7 +14,7 @@ PandaPush-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -26,7 +26,7 @@ PandaSlide-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -39,7 +39,7 @@ PandaPickAndPlace-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -53,7 +53,7 @@ PandaReachDense-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -65,7 +65,7 @@ PandaPushDense-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -77,7 +77,7 @@ PandaSlideDense-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
@@ -90,7 +90,7 @@ PandaPickAndPlaceDense-v3:
   normalize: true
   n_envs: 16
   n_timesteps: !!float 1e6
-  policy: 'MlpPolicy'
+  policy: 'MultiInputPolicy'
   n_steps: 16
   batch_size: 256
   gae_lambda: 0.95
