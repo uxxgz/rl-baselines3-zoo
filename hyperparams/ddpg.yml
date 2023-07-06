@@ -45,6 +45,46 @@ PandaReachDense-v3:
   learning_rate: !!float 1e-3
   policy_kwargs: "dict(net_arch=[400, 300])"
 
+    # recommended parameter by https://www.kaggle.com/code/sakshaymahna/panda-robot-ddpg/notebook:
+    # total_timesteps = 1000000
+    # lr = 0.001
+    # n_updates = 999900
+    # buffer_size = 100000
+    # batch_size = 2048
+    # learning_starts = 100
+    # tau = 0.005
+    # gamma = 0.95
+    # gradient_steps = -1
+    # HER params:
+    # goal_selection_strategy = future
+    # n_sampled_goals = 4
+
+  PandaPickAndPlace-v3:
+  n_timesteps: !!float 1e5
+  policy: 'MultiInputPolicy'
+  gamma: 0.95
+  buffer_size: 100000
+  learning_starts: 100
+  noise_type: 'normal'
+  noise_std: 0.1
+  gradient_steps: -1
+  train_freq: [1, "future"] # Ist das hier von HER? Dann lieber future!
+  learning_rate: !!float 0.001
+  policy_kwargs: "dict(net_arch=[400, 300])"
+
+PandaPickAndPlaceDense-v3:
+  n_timesteps: !!float 1e5
+  policy: 'MultiInputPolicy'
+  gamma: 0.95
+  buffer_size: 100000
+  learning_starts: 100
+  noise_type: 'normal'
+  noise_std: 0.1
+  gradient_steps: -1
+  train_freq: [1, "future"] # Ist das hier von HER? Dann lieber future!
+  learning_rate: !!float 0.001
+  policy_kwargs: "dict(net_arch=[400, 300])"
+  
 BipedalWalker-v3:
   n_timesteps: !!float 1e6
   policy: 'MlpPolicy'
