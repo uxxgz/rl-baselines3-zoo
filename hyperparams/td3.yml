@@ -11,6 +11,7 @@ PandaReach-v3:
   gradient_steps: -1
   train_freq: [1, "episode"]
   learning_rate: !!float 1e-3
+  replay_buffer_class: HerReplayBuffer
   policy_kwargs: "dict(net_arch=[400, 300])"
 
 PandaReachDense-v3:
@@ -24,6 +25,7 @@ PandaReachDense-v3:
   gradient_steps: -1
   train_freq: [1, "episode"]
   learning_rate: !!float 1e-3
+  replay_buffer_class: HerReplayBuffer
   policy_kwargs: "dict(net_arch=[400, 300])"
 
 
@@ -38,6 +40,7 @@ PandaReachJointsDense-v3:
   gradient_steps: -1
   train_freq: [1, "episode"]
   learning_rate: !!float 1e-3
+  replay_buffer_class: HerReplayBuffer
   policy_kwargs: "dict(net_arch=[400, 300])"
 
 
@@ -52,7 +55,25 @@ PandaReachJoints-v3:
   gradient_steps: -1
   train_freq: [1, "episode"]
   learning_rate: !!float 1e-3
+  replay_buffer_class: HerReplayBuffer
   policy_kwargs: "dict(net_arch=[400, 300])"
 
+
+
+
+
+PandaPickAndPlaceDense-v3:
+  n_timesteps: !!float 3e5
+  policy: 'MultiInputPolicy'
+  gamma: 0.98
+  buffer_size: 200000
+  learning_starts: 10000
+  noise_type: 'normal'
+  noise_std: 0.1
+  gradient_steps: -1
+  train_freq: [1, "episode"]
+  learning_rate: !!float 1e-3
+  replay_buffer_class: HerReplayBuffer
+  policy_kwargs: "dict(net_arch=[400, 300])"
 
 
