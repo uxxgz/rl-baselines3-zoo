@@ -15,7 +15,7 @@ def sample_ppo_params(trial: optuna.Trial) -> Dict[str, Any]:
     :param trial:
     :return:
     """
-    batch_size = trial.suggest_categorical("batch_size", [512, 1024, , 20484096])
+    batch_size = trial.suggest_categorical("batch_size", [512, 1024, 2048, 4096])
     n_steps = trial.suggest_categorical("n_steps", [8, 16, 32, 64, 128, 256, 512, 1024, 2048])
     gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.99, 0.995])
     learning_rate = trial.suggest_float("learning_rate", 5e-4, 1e-3, log=True)
