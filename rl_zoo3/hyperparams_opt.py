@@ -334,6 +334,21 @@ def sample_ddpg_params(trial: optuna.Trial) -> Dict[str, Any]:
     :param trial:
     :return:
     """
+
+    # recommended parameter by https://www.kaggle.com/code/sakshaymahna/panda-robot-ddpg/notebook:
+    # total_timesteps = 1000000
+    # lr = 0.001
+    # n_updates = 999900
+    # buffer_size = 100000
+    # batch_size = 2048
+    # learning_starts = 100
+    # tau = 0.005
+    # gamma = 0.95
+    # gradient_steps = -1
+    # HER params:
+    # goal_selection_strategy = future
+    # n_sampled_goals = 4
+    
     gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 100, 128, 256, 512, 1024, 2048])
@@ -355,6 +370,8 @@ def sample_ddpg_params(trial: optuna.Trial) -> Dict[str, Any]:
         "small": [64, 64],
         "medium": [256, 256],
         "big": [400, 300],
+        # Uncomment for tuning HER
+        # "verybig": [256, 256, 256],
     }[net_arch]
 
     hyperparams = {
