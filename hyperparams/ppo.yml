@@ -97,3 +97,34 @@ PandaPickAndPlaceDense-v3:
   gamma: 0.99
   n_epochs: 10
   ent_coef: 0.0
+
+
+
+
+PandaReachJoints-v3:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MultiInputPolicy'
+  n_steps: 16
+  batch_size: 256
+  gae_lambda: 0.95
+  gamma: 0.99
+  n_epochs: 10
+  ent_coef: 0.0
+
+
+
+
+
+PandaReachJointsDense-v3:
+  normalize: true
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MultiInputPolicy'
+  n_steps: 16
+  batch_size: 256
+  gae_lambda: 0.95
+  gamma: 0.99
+  n_epochs: 10
+  ent_coef: 0.0
