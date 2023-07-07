@@ -230,7 +230,7 @@ def sample_sac_params(trial: optuna.Trial) -> Dict[str, Any]:
     # ent_coef = trial.suggest_categorical('ent_coef', ['auto', 0.1, 0.05, 0.01, 0.0001])
     ent_coef = "auto"
     # You can comment that out when not using gSDE
-    # log_std_init = trial.suggest_uniform("log_std_init", -4, 1)
+    log_std_init = trial.suggest_uniform("log_std_init", -4, 1)
     # NOTE: Add "verybig" to net_arch when tuning HER
     net_arch = trial.suggest_categorical("net_arch", ["small", "medium", "big"])
     # activation_fn = trial.suggest_categorical('activation_fn', [nn.Tanh, nn.ReLU, nn.ELU, nn.LeakyReLU])
