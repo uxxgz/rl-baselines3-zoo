@@ -35,7 +35,7 @@ PandaSlideDense-v3:
   replay_buffer_kwargs: "dict( goal_selection_strategy='future', n_sampled_goal=4, )"
   policy_kwargs: "dict(net_arch=[64, 64])"
 
-PandaPickAndPlace-v3:
+PandaPickAndPlaceDense-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
   buffer_size: 1000000
