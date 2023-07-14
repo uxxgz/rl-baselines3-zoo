@@ -120,7 +120,6 @@ PandaReachJoints-v3:
 
 #Hyperparametertuning
 
-
 PandaPickAndPlaceDense-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
@@ -130,8 +129,8 @@ PandaPickAndPlaceDense-v3:
   normalize: true
   replay_buffer_class: HerReplayBuffer
   replay_buffer_kwargs: "dict( goal_selection_strategy='future', n_sampled_goal=4, )"
-  policy_kwargs: "dict(net_arch=[64, 64])"
+  policy_kwargs: "dict(net_arch=[256, 256, 256])"
   tau: 0.0005
-  log_std_init: -2.28698428949498
   gamma: 0.995
   train_freq: 64
+  learning_starts: 1000
