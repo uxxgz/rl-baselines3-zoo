@@ -34,7 +34,7 @@ PandaSlideDense-v3:
   replay_buffer_class: HerReplayBuffer
   replay_buffer_kwargs: "dict( goal_selection_strategy='future', n_sampled_goal=4, )"
   policy_kwargs: "dict(net_arch=[64, 64])"
-"""
+
 PandaPickAndPlaceDense-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
@@ -46,7 +46,6 @@ PandaPickAndPlaceDense-v3:
   replay_buffer_kwargs: "dict( goal_selection_strategy='future', n_sampled_goal=4, )"
   policy_kwargs: "dict(net_arch=[64, 64])"
 
-"""
 PandaReach-v3:
   n_timesteps: !!float 1000000.0
   policy: 'MultiInputPolicy'
