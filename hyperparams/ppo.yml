@@ -143,8 +143,6 @@ PandaPickAndPlaceDense-v3:
   gae_lambda: 0.9
   gamma: 0.9
   n_epochs: 10
-  ent_coef: 0.00286
-  #activation_fn: 'relu'
-  #net_arch: "medium"
+  ent_coef: 0.00286 
   n_timesteps: !!float 8e6
 
